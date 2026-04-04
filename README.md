@@ -11,7 +11,7 @@
 - axpy_avx(y, a, x, n) ： y = a*x + y ，线代核心基元，很多算法都会用。
 - scal_avx(x, a, n) ：向量缩放。
 - add_inplace_avx(dst, src, n) ：就地加法，减少额外内存。
-- dot_fma_avx(...) ：FMA 版本点积（支持时更快更准）。
+- fma_avx(...) ：FMA 版本点积（支持时更快更准）。
 - matmul_blocked_avx(...) ：分块矩阵乘，比当前 naive 版更接近高性能。
 
 中优先级
