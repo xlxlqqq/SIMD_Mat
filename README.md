@@ -34,7 +34,10 @@
 
 ### test_simd.exe
 - 主要文件： test_simd.cpp
-- 编译命令： g++ -O2 -mavx2 test_simd.cpp utils/SIMD_Mat.cpp -o test_simd.exe
+- 编译命令（AVX优化）： g++ -O2 -mavx2 test_simd.cpp utils/SIMD_Mat.cpp -o test_simd.exe
+- 编译命令（不优化）：  g++ -O2 benchmark/test_cpu.cpp -o benchmark/test_cpu.exe
+- 对比：Matrix size: 512 x 512 * 512 x 512  AVX优化：20ms左右 CPU不优化：70ms左右
+ 
 
 ### SIMD_Mat.dll
 - 主要文件： utils/SIMD_Mat.cpp
